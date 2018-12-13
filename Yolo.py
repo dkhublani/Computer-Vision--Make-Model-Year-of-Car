@@ -51,7 +51,6 @@ def find_object():
             if obj['label'] == 'car':
                 car = extract_car(img, obj)
                 car = resize(car, (299, 299))
-                pred = auto_model.predict(car[None, :, :, :])
 
                 classe = np.argmax(pred[0])
 
